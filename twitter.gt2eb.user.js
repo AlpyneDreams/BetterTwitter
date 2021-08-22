@@ -375,6 +375,7 @@
     hideTrends:               false,
     leftTrends:               true,
     show10Trends:             false,
+    outlinedCards:            true,
 
     legacyProfile:            false,
     squareAvatars:            false,
@@ -509,6 +510,7 @@
           ${getSettingTogglePart("hideTrends")}
           ${getSettingTogglePart("leftTrends")}
           ${getSettingTogglePart("show10Trends")}
+          ${getSettingTogglePart("outlinedCards")}
           <div class="gt2-settings-seperator"></div>
 
           <div class="gt2-settings-sub-header">${getLocStr("navProfile")}</div>

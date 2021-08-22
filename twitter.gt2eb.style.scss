@@ -42,6 +42,16 @@ $notLegacyProfile: "
   src: url(https://abs.twimg.com/a/1569889127/font/edge-icons-Regular.woff);
 }
 
+@mixin card {
+  border-radius: 16px;
+  background-color: var(--color-navbar);
+  overflow: hidden;
+  .gt2-opt-outlined-cards & {
+    border: solid 1px var(--color-gray-dark);
+    border-radius: 0;
+    background-color: var(--color-elem);  
+  }
+}
 
 @mixin hoverableSvg {
   display: flex;
@@ -713,9 +723,10 @@ main {
 
             // apply theme to sidebar elements
             & > div {
-              border-radius: 0;
-              border: 1px solid var(--color-gray-dark);
-              background-color: var(--color-elem);
+              // If we're not doing
+              :not(.gt2-opt-outlined-cards) &:not(:last-child) {
+                @include card;
+              }
               margin-bottom: 10px;
 
               &:nth-last-child(1) nav {
@@ -2441,9 +2452,7 @@ body[data-gt2-path="i/moment_maker"] {
   // moved trends
   .gt2-trends,
   .gt2-profile-media {
-    border: solid 1px var(--color-gray-dark);
-    border-radius: 0;
-    background-color: var(--color-elem);
+    @include card;
   }
 }
 
@@ -2454,8 +2463,7 @@ body[data-gt2-path="i/moment_maker"] {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-gray-dark);
-  background-color: var(--color-elem);
+  @include card;
   box-sizing: border-box;
 
   a:not([href]) {
@@ -2589,9 +2597,9 @@ div[data-testid=sidebarColumn] .gt2-dashboard-profile {
 
 // gt2 sidebar notice
 .gt2-sidebar-notice {
-  background-color: var(--color-elem);
   color: var(--color-text);
-  border: 1px solid var(--color-gray-dark);
+
+  @include card;
 
   @include standardLink;
 

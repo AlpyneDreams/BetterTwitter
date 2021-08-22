@@ -152,6 +152,7 @@ let i18n = {
   "favorite": "Favorite",
   "favorites": "Favorites",
   "favoriteLikes": "Replace Likes with Favorites",
+  "outlinedCards": "Outlined Cards",
 
   "updatedInfo": "Updated to $version$!",
   "updatedInfoChangelog": "Changelog"
