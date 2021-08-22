@@ -140,6 +140,7 @@ let i18n = {
   "enableQuickBlockDesc": "Hover over the follow button for 3 seconds to block a profile.",
   "legacyProfile": "Legacy Profile Layout",
   "show10Trends": "Always Show 10 Trends",
+  "sidebarProfile": "Sidebar User Profile",
   "stickySidebars": "Sticky Sidebars",
   "smallSidebars": "Small Sidebars",
   "smallSidebarsDesc": "290px instead of 350px wide sidebars.",

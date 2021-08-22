@@ -427,6 +427,9 @@ $notLegacyProfile: "
     }
   }
 }
+
+@import "scss/bettertwitter.scss";
+
 @media only screen and (max-width: 1350px)
                    and (min-width: 1005px) {
   body:not(.gt2-opt-small-sidebars) {

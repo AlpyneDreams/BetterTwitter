@@ -369,6 +369,7 @@
     hideTranslateTweetButton: false,
     tweetIconsPullLeft:       false,
 
+    sidebarProfile:           true,
     stickySidebars:           true,
     smallSidebars:            false,
     hideTrends:               false,
@@ -502,6 +503,7 @@
           <div class="gt2-settings-seperator"></div>
 
           <div class="gt2-settings-sub-header">${getLocStr("settingsHeaderSidebars")}</div>
+          ${getSettingTogglePart("sidebarProfile")}
           ${getSettingTogglePart("stickySidebars")}
           ${getSettingTogglePart("smallSidebars")}
           ${getSettingTogglePart("hideTrends")}
