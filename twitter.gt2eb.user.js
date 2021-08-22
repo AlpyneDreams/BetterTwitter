@@ -1,7 +1,8 @@
 // ==UserScript==
-// @name          GoodTwitter 2 - Electric Boogaloo
-// @version       0.0.31.1
+// @name          BetterTwitter
+// @version       0.1.31.1
 // @description   A try to make Twitter look good again
+// @author        Alpyne
 // @author        schwarzkatz
 // @license       MIT
 // @match         https://twitter.com/*
@@ -32,6 +33,8 @@
 
 (function($, waitForKeyElements) {
   "use strict"
+
+  const SCRIPT_NAME = 'BetterTwitter';
 
   // do not execute on these pages
   if (getPath().match(/^login(\?.*)?$/) || (!isLoggedIn() && getPath().match(/^(\?.*)?$/))) {
@@ -429,7 +432,7 @@
          main div[data-testid=loggedOutPrivacySection]`).append(`
         <a class="gt2-toggle-settings" href="/settings/gt2">
           <div>
-            <span>GoodTwitter2</span>
+            <span>${SCRIPT_NAME}</span>
             ${getSvg("caret")}
           </div>
         </a>
@@ -483,7 +486,7 @@
             <div></div>
             ${getSvg("arrow")}
           </div>
-          GoodTwitter2 v${GM_info.script.version}
+          ${SCRIPT_NAME} v${GM_info.script.version}
         </div>
         <div class="gt2-settings">
           <div class="gt2-settings-sub-header">${getLocStr("settingsHeaderTimeline")}</div>
@@ -587,7 +590,7 @@
   // change the title to display GoodTwitter2
   function changeSettingsTitle() {
     let t = $("title").html()
-    $("title").html(`${t.startsWith("(") ? `${t.split(" ")[0]} ` : ""}GoodTwitter2 / Twitter`)
+    $("title").html(`${t.startsWith("(") ? `${t.split(" ")[0]} ` : ""}${SCRIPT_NAME} / Twitter`)
   }
 
 
@@ -854,7 +857,7 @@
     return `
       <div class="gt2-sidebar-notice gt2-update-notice">
         <div class="gt2-sidebar-notice-header">
-          GoodTwitter 2
+          ${SCRIPT_NAME}
           <div class="gt2-sidebar-notice-close">
             <div></div>
             ${getSvg("x")}
